@@ -1,0 +1,32 @@
+/* Variables
+-------------------------------------------------- */
+$__color__link: $color__brand-primary;
+$__color__link-visited: $color__brand-primary;
+$__color__link-hover: darken($color__brand-primary, 10%);
+
+/* Links
+-------------------------------------------------- */
+a {
+	color: $__color__link;
+	text-decoration: none;
+
+	&:visited {
+		color: $__color__link;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: $__color__link-hover;
+	}
+	&:focus {
+		outline: thin dotted;
+	}
+	&:hover,
+	&:active {
+		outline: 0;
+	}
+}
+
+
+/* Custom
+-------------------------------------------------- */

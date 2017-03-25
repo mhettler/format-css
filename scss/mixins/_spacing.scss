@@ -1,0 +1,72 @@
+/* Variables
+-------------------------------------------------- */
+$__none: 0;
+$__xsmall: $size__spacing-small/2;
+$__small: $size__spacing-small;
+$__medium: $size__spacing-default;
+$__large: $size__spacing-large;
+$__xlarge: $size__spacing-xlarge;
+$__xxlarge: $size__spacing-xlarge*2;
+$__jumbo: $size__spacing-xlarge*4;
+
+// Each of these variables need to be unique for the loop to work correctly
+$__sizes: $__none $__xsmall $__small $__medium $__large $__xlarge $__xxlarge $__jumbo;
+
+
+/* Spacing
+-------------------------------------------------- */
+@each $size in $__sizes {
+	$i: index($__sizes, $size) - 1;
+
+	.pa#{$i} {
+		padding: $size;
+	}
+	.pl#{$i} {
+		padding-left: $size;
+	}
+	.pr#{$i} {
+		padding-right: $size;
+	}
+	.pt#{$i} {
+		padding-top: $size;
+	}
+	.pb#{$i} {
+		padding-bottom: $size;
+	}
+	.pv#{$i} {
+		padding-top: $size;
+		padding-bottom: $size;
+	}
+	.ph#{$i} {
+		padding-left: $size;
+		padding-right: $size;
+	}
+}
+
+@each $size in $__sizes {
+	$i: index($__sizes, $size) - 1;
+
+	.ma#{$i} {
+		margin: $size;
+	}
+	.ml#{$i} {
+		margin-left: $size;
+	}
+	.mr#{$i} {
+		margin-right: $size;
+	}
+	.mt#{$i} {
+		margin-top: $size;
+	}
+	.mb#{$i} {
+		margin-bottom: $size;
+	}
+	.mv#{$i} {
+		margin-top: $size;
+		margin-bottom: $size;
+	}
+	.mh#{$i} {
+		margin-left: $size;
+		margin-right: $size;
+	}
+}

@@ -1,0 +1,108 @@
+/* Typography
+-------------------------------------------------- */
+$typography__family-default: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif !default;
+$typography__family-headers: -apple-system, BlinkMacSystemFont, 'avenir next', avenir, 'helvetica neue', helvetica, ubuntu, roboto, noto, 'segoe ui', arial, sans-serif !default;
+$typography__family-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace !default;
+$typography__family-pre: "Courier 10 Pitch", Courier, monospace !default;
+
+// Sizes
+$typography__line-height-solid: 1 !default;
+$typography__line-height-copy: 1.5 !default;
+$typography__line-height-header: 1.5 !default;
+
+$typography__size-base: 1.25rem !default;
+$typography__size-headline: 4rem !default;
+$typography__size-sub-headline: 3.5rem !default;
+$typography__size-1: 3rem !default;
+$typography__size-2: 2.25rem !default;
+$typography__size-3: 1.5rem !default;
+$typography__size-4: 1.25rem !default;
+$typography__size-5: 1rem !default;
+$typography__size-6: .875rem !default;
+
+$typography__size-icons: 1.5rem !default;
+
+
+// Weights
+$typography__weight-header-default: 100 !default;
+$typography__weight-header-bold: 400 !default;
+$typography__weight-header-bolder: 500 !default;
+
+$typography__weight-default: 300 !default;
+$typography__weight-medium: 400 !default;
+$typography__weight-bold: 700 !default;
+
+
+/* Colors
+-------------------------------------------------- */
+$color__background-body: #fff !default;
+$color__background-pre: #eee !default;
+
+// Text
+$color__text-default: #333 !default;
+$color__text-headers: #111 !default;
+
+// Branding
+$color__brand-primary: #7FDBFF !default;
+$color__brand-secondary: #2d81c3 !default;
+$color__brand-tertiary: #bee3f9 !default;
+
+// Grayscale
+$color__black: #0d0d0e !default;
+$color__darkgray: #313439 !default;
+$color__midgray: #676b72 !default;
+$color__gray: #bdbdbd !default;
+$color__lightgray: #d4d4d4 !default;
+$color__silver: #e0e1e1 !default;
+$color__aluminum: #ececec !default;
+
+// Messages
+$color__warning: #FF4136 !default;
+$color__success: #2ECC40 !default;
+
+/* Structure
+-------------------------------------------------- */
+$size__site-main: 100% !default;
+
+$size__max-width-container: 80.0rem !default;
+$size__max-width-container-large: 100.0rem !default;
+
+$size__spacing-xlarge: 8rem !default;
+$size__spacing-large: 4rem !default;
+$size__spacing-default: 2rem !default;
+$size__spacing-small: 1rem !default;
+
+// Navigation
+$size__nav-height: 128px !default;
+$size__logo-height: 60px !default;
+
+// Radius
+$radius__default: .25rem !default;
+
+// Borders
+$border__width-default: .1rem !default;
+
+// Buttons & Inputs
+$input__height: 3rem !default;
+
+/* Z-Index
+-------------------------------------------------- */
+$z-index__over-content: 100 !default;
+$z-index__over-control: 200 !default;
+$z-index__over-page: 300 !default;
+$z-index__over-screen: 400 !default;
+$z-index__over-all: 500 !default;
+
+/* Breakpoints
+-------------------------------------------------- */
+$breakpoint__big-desktop: 120.0rem !default; // 1800px
+$breakpoint__desktop: 80.0rem !default; // 1200px
+$breakpoint__tablet-landscape: 60.0rem !default; // 900px
+$breakpoint__tablet-portrait: 40.0rem !default; // 600px
+$breakpoint__mobile: calc(40.0rem - 1px) !default; // 599px
+
+/* Transitions
+-------------------------------------------------- */
+$transition__duration-hover: 150ms !default;
+$transition__duration: 250ms !default;
+$transition__duration-long: 500ms !default;

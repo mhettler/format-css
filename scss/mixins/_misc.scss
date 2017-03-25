@@ -1,0 +1,64 @@
+/* Variables
+-------------------------------------------------- */
+
+
+/* Transitions
+-------------------------------------------------- */
+@mixin transition($transition) {
+    -moz-transition:    $transition;
+    -o-transition:      $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+
+/* Buttons
+-------------------------------------------------- */
+@mixin solid-button-hover($initial-color) {
+	background-color: darken($initial-color, 10%);
+	border-color: darken($initial-color, 10%);
+}
+
+@mixin outline-button-hover($initial-color) {
+	color: darken($initial-color, 20%);
+	border-color: darken($initial-color, 20%);
+}
+
+@mixin link-button-hover($initial-color) {
+	color: darken($initial-color, 20%);
+}
+
+
+/* Positions
+-------------------------------------------------- */
+@mixin position-cover {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+
+/* Breakpoints
+-------------------------------------------------- */
+@mixin for-phone-only {
+	// 599px
+	@media (max-width: $breakpoint__mobile) { @content; }
+}
+@mixin for-tablet-portrait-up {
+	// 600px
+	@media (min-width: $breakpoint__tablet-portrait) { @content; }
+}
+@mixin for-tablet-landscape-up {
+	// 900px
+	@media (min-width: $breakpoint__tablet-landscape) { @content; }
+}
+@mixin for-desktop-up {
+	// 1200px
+	@media (min-width: $breakpoint__desktop) { @content; }
+}
+@mixin for-big-desktop-up {
+	// 1800px
+	@media (min-width: $breakpoint__big-desktop) { @content; }
+}

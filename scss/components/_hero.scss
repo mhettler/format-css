@@ -1,0 +1,59 @@
+/* Variables
+-------------------------------------------------- */
+$__overlay-opacity: 0.6;
+
+
+/* Hero
+-------------------------------------------------- */
+html,
+body,
+main {
+	height: 100%;
+}
+
+.hero {
+	position: relative;
+	background-color: $color__brand-primary;
+
+	.text {
+		width: 100%;
+		text-align: center;
+		z-index: 20;
+		@include position-cover;
+		@include flex;
+		@include flex-items-middle;
+		@include flex-items-center;
+		@include flex-items-column;
+
+		.title {
+			font-weight: $typography__weight-header-default;
+			font-size: $typography__size-headline;
+			line-height: 1;
+			margin-bottom: $size__spacing-small;
+		}
+
+		.lead {
+			font-family: $typography__family-headers;
+			font-weight: $typography__weight-header-default;
+		}
+
+		.title, .lead {
+			color: #fff;
+		}
+	}
+}
+
+
+/* Utilities
+-------------------------------------------------- */
+.hero.height-75 {
+	min-height: 75%;
+}
+
+.hero.height-60 {
+	min-height: 60%;
+}
+
+.hero.height-50 {
+	min-height: 50%;
+}

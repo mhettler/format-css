@@ -1,0 +1,76 @@
+/* Variables
+-------------------------------------------------- */
+$__typography__family-default: $typography__family-default;
+$__typography__line-height-default: $typography__line-height-solid;
+$__color__text-default: $color__text-default;
+$__typography__size: $typography__size-4;
+$__typography__weight-default: $typography__weight-default;
+$__typography__line-height-default: $typography__line-height-solid;
+
+$__border: 1px solid darken(#fff, 8%);
+
+$__mobile-typography__size: $typography__size-5;
+
+/* Base
+-------------------------------------------------- */
+// Set box-sizing globally to handle padding and border widths
+*,
+*:after,
+*:before {
+	box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 93.8%; // 15px base
+}
+
+body {
+	font-family: $__typography__family-default;
+	color: $__color__text-default;
+	font-size: $__mobile-typography__size;
+	font-weight: $__typography__weight-default;
+	letter-spacing: .01em;
+	line-height: $__typography__line-height-default;
+	background-color: $color__background-body;
+}
+
+@include for-tablet-portrait-up {
+	body {
+		font-size: $__typography__size;
+	}
+}
+
+
+section {
+	padding: $size__spacing-large 0;
+	background-color: #fff;
+
+	&.border,
+	.border {
+		border-bottom: $__border;
+	}
+	
+	h1.border,
+	h2.border,
+	h3.border,
+	h4.border,
+	h5.border,
+	h6.border {
+		padding-bottom: $size__spacing-default;
+		margin-bottom: $size__spacing-default;
+	}
+}
+
+.site-footer {
+	border-top: $__border;
+	padding: $size__spacing-large 0;
+	margin-top: $size__spacing-xlarge;
+
+	svg path {
+		fill: $color__brand-primary;
+	}
+}
+
+/* Custom
+-------------------------------------------------- */

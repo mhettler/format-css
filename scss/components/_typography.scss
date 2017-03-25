@@ -1,0 +1,233 @@
+/* Variables
+-------------------------------------------------- */
+$__typography__family-headers: $typography__family-headers;
+$__weight: $typography__weight-header-bold;
+$__color__text-headers: $color__text-headers;
+$__color__text-default: $color__text-default;
+$__header__line-height: $typography__line-height-header;
+$__copy__line-height: $typography__line-height-copy;
+
+$__size__spacing-default: $size__spacing-small;
+$__size__margin: $size__spacing-large;
+
+$__h1__size: $typography__size-1;
+
+$__h2__size: $typography__size-2;
+
+$__h3__size: $typography__size-3;
+
+$__h4__size: $typography__size-4;
+
+$__h5__size: $typography__size-5;
+
+$__h6__size: $typography__size-6;
+
+
+/* Headers
+-------------------------------------------------- */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6, {
+	font-family: $__typography__family-headers;
+	font-weight: $__weight;
+    line-height: $__header__line-height;
+    color: $__color__text-headers;
+    text-rendering: optimizeLegibility;
+    margin-top: 0;
+    margin-bottom: $__size__spacing-default;
+}
+
+h1, .h1 {
+    font-size: $__h1__size;
+}
+
+h2, .h2 {
+    font-size: $__h2__size;
+}
+
+h3, .h3 {
+    font-size: $__h3__size;
+}
+
+h4, .h4 {
+    font-size: $__h4__size;
+}
+
+h5, .h5 {
+    font-size: $__h5__size;
+}
+
+h6, .h6 {
+    font-size: $__h6__size;
+}
+
+h1 a, .h1 a,
+h2 a, .h2 a,
+h3 a, .h3 a,
+h4 a, .h4 a,
+h5 a, .h5 a,
+h6 a, .h6 a, {
+  color: inherit;
+}
+
+/* Body
+-------------------------------------------------- */
+p {
+	margin-top: 0;
+    line-height: $__copy__line-height;
+}
+
+b, strong {
+	font-weight: $__weight;
+}
+
+// Block Tags
+p, blockquote, hr, pre, ol, ul, dl, table, figure, address, form {
+	margin-bottom: $__size__spacing-default;
+}
+
+hr {
+    border: none;
+	border-bottom: 1px solid rgba(0, 0, 0, .1);
+	margin-top: -1px;
+}
+
+blockquote {
+	margin-left: 0;
+	margin-right: 0;
+	padding-left: $__size__spacing-default;
+	border-left: .3rem solid rgba($__color__text-default, .65);
+	font-style: italic;
+	color: rgba($__color__text-default, .65);
+    position: relative;
+    right: -$__size__spacing-default;
+
+	& p {
+    	margin-bottom: 0;
+	}
+}
+
+pre {
+    width: 100%;
+    padding: $__size__spacing-default;
+    margin-top: 0;
+    background-color: $color__aluminum;
+    border-radius: $radius__default;
+    overflow-x: auto;
+}
+
+code {
+    font-family: $typography__family-code;
+    font-size: 60%;
+    color: $color__midgray;
+}
+
+
+/* Utility
+-------------------------------------------------- */
+.upper {
+    text-transform: uppercase;
+}
+
+.upper-title {
+    text-transform: uppercase;
+    font-size: $typography__size-5;
+    font-weight: $typography__weight-header-bolder;
+    letter-spacing: .1em;
+}
+
+.lower {
+    text-transform: lowercase;
+}
+
+.italic {
+    font-style: italic !important;
+}
+
+.strong {
+    font-weight: bold !important;
+}
+
+.normal {
+    font-weight: normal !important;
+}
+
+.muted {
+    opacity: .55;
+}
+
+.smaller {
+    font-size: $typography__size-6;
+}
+
+.small {
+    font-size: $typography__size-5;
+}
+
+.large {
+    font-size: $typography__size-3;
+}
+
+.xlarge {
+    font-size: $typography__size-2;
+}
+
+.headline {
+    font-size: $typography__size-headline;
+}
+
+.sub-headline {
+    font-size: $typography__size-sub-headline;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+
+    &:focus {
+        background-color: $color__background-body;
+        border-radius: 3px;
+        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+        clip: auto !important;
+        color: $color__black;
+        display: block;
+        font-weight: bold;
+        height: auto;
+        left: 5px;
+        line-height: normal;
+        padding: 15px 23px 14px;
+        text-decoration: none;
+        top: 5px;
+        width: auto;
+        z-index: 100000; /* Above WP toolbar. */
+    }
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+    outline: 0;
+}
+
+
+/* Custom
+-------------------------------------------------- */
+

@@ -1,0 +1,35 @@
+/* Variables
+-------------------------------------------------- */
+$__gallery-gutter: $size__spacing-default;
+
+
+/* Images
+-------------------------------------------------- */
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+.image--container img {
+	display: none;
+}
+
+.image--container.image--background-image {
+	background-size: cover;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	opacity: 0;
+}
+
+.image--background-image.image--contain {
+	background-size: contain;
+}
+
+.image-loaded {
+	opacity: 1 !important;
+	transition: opacity $transition__duration ease-in-out;
+}
+
+
+/* Utilities
+-------------------------------------------------- */

@@ -1,0 +1,180 @@
+/* Variables
+-------------------------------------------------- */
+$__primary-color: $color__brand-primary;
+$__secondary-color: $color__text-default; // Secondary -- typically color of copy text
+$__white: $color__text-default; // White -- for overlaying on background colors or images
+$__success-color: $color__success;
+$__warning-color: $color__warning;
+
+$__colors: 'secondary' $__secondary-color,
+		   'white' $__white,
+		   'success' $__success-color,
+		   'warning' $__warning-color;
+
+$__radius: $radius__default;
+$__border-width: $border__width-default;
+$__padding: $size__spacing-small;
+$__font-weight: $typography__weight-medium;
+
+
+
+/* Buttons
+-------------------------------------------------- */
+.button,
+button,
+input[type='button'],
+input[type='reset'],
+input[type='submit'] {
+	font-family: $typography__family-headers;
+	background-color: $__primary-color;
+	border: $__border-width solid $__primary-color;
+	border-radius: $__radius;
+	color: #fff;
+	cursor: pointer;
+	display: inline-block;
+	font-size: .75rem;
+	font-weight: $__font-weight;
+	height: $input__height;
+	letter-spacing: .1rem;
+	line-height: $input__height;
+	padding: 0 $__padding;
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	white-space: nowrap;
+	@include transition(all .15s ease-in);
+
+	&:focus,
+	&:hover {
+		color: #fff;
+		outline: 0;
+		@include solid-button-hover($__primary-color);
+		@include transition(all .15s ease-in);
+	}
+
+	&[disabled] {
+		cursor: default;
+		opacity: .5;
+
+		&:focus,
+		&:hover {
+			background-color: $__primary-color;
+			border-color: $__primary-color;
+		}
+	}
+
+	&.button-outline {
+		background-color: transparent;
+		color: $__primary-color;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			@include outline-button-hover($__primary-color);
+		}
+
+		&[disabled] {
+			&:focus,
+			&:hover {
+				border-color: inherit;
+				color: $__primary-color;
+				background-color: initial;
+			}
+		}
+	}
+
+	&.button-link {
+		background-color: transparent;
+		border-color: transparent;
+		color: $__primary-color;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+			border-color: transparent;
+			@include link-button-hover($__primary-color);
+		}
+
+		&[disabled] {
+
+			&:focus,
+			&:hover {
+				color: $__primary-color;
+			}
+		}
+	}
+}
+
+
+/* Utilities
+-------------------------------------------------- */
+@each $button-color in $__colors {
+	$name: nth($button-color, 1);
+	$color: nth($button-color, 2);
+
+	button.button-#{$name} {
+		background-color: $color;
+		border-color: $color;
+
+		&:focus,
+		&:hover {
+			@include solid-button-hover($color);
+		}
+
+		&[disabled] {
+			&:focus,
+			&:hover {
+				background-color: $color;
+				border-color: $color;
+			}
+		}
+
+		&.button-link,
+		&.button-outline {
+			background-color: transparent;
+			color: $color;
+		}
+
+		&.button-outline {
+			&:focus,
+			&:hover {
+				@include outline-button-hover($color);
+			}
+
+			&[disabled] {
+				&:focus,
+				&:hover {
+					border-color: inherit;
+					color: $color;
+					background-color: initial;
+				}
+			}
+		}
+
+		&.button-link {
+			border-color: transparent;
+
+			&:focus,
+			&:hover {
+				@include link-button-hover($color);
+			}
+
+			&[disabled] {
+				&:focus,
+				&:hover {
+					color: $color;
+				}
+			}
+		}
+	}
+}
+
+// No radius
+.no-radius {
+	border-radius: 0;
+}
+
+// Pills
+.pill {
+	border-radius: 9999px;
+}

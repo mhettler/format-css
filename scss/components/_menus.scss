@@ -1,0 +1,76 @@
+/* Variables
+-------------------------------------------------- */
+$__menu-padding: $size__spacing-default;
+$__link-color: $color__text-headers;
+$__link-hover: darken($__link-color, 10%);
+
+
+/* Main Menu
+-------------------------------------------------- */
+nav {
+	width: 100%;
+	padding: $__menu-padding 0;
+
+	.container {
+		@include flex;
+		@include flex-items-middle;
+	}
+
+	.menu {
+		display: none;
+		margin-left: auto;
+		margin-right: -$__menu-padding;
+
+		a {
+			padding: $__menu-padding;
+		}
+	}
+
+	a {
+		color: $__link-color;
+
+		&:visited {
+			color: $__link-color;
+		}
+
+		&:hover,
+		&:focus,
+		&:active {
+			color: $__link-hover;
+		}
+	}
+
+	.hamburger {
+		margin-left: auto;
+		display: block;
+
+		&:focus,
+		&:hover {
+			background-color: transparent;
+		}
+	}
+
+}
+
+@include for-tablet-portrait-up {
+	nav {
+		.menu {
+			display: block;
+		}
+
+		.hamburger {
+			display: none;
+		}
+	}
+}
+
+
+/* Utilities
+-------------------------------------------------- */
+nav.border {
+	border-bottom: 1px solid #efefef;
+}
+
+
+/* Custom
+-------------------------------------------------- */
