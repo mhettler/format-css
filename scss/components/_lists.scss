@@ -3,7 +3,7 @@
 $__size__spacing-default: $size__spacing-default;
 
 
-/* Lists
+/* Default Lists
 -------------------------------------------------- */
 dl,
 ol,
@@ -16,7 +16,6 @@ ul {
 	dl,
 	ol,
 	ul {
-		// font-size: 90%;
 		margin: $__size__spacing-default 0 $__size__spacing-default $__size__spacing-default*2;
 	}
 }
@@ -39,25 +38,20 @@ ul {
 	list-style: circle outside;
 }
 
-/* Utilities
--------------------------------------------------- */
-ul.unstyled {
-    & {
-        margin-left: 0;
-    }
-    &,
-    & ul {
-        list-style: none;
-        margin-bottom: 0;
-    }
+dl {
+	width: 100%;
+	overflow: hidden;
 }
 
-ul.horizontal {
-	list-style: none;
-    margin-bottom: 0;
-    
-	li {
-		display: inline-block;
-		// margin-right: $__size__spacing-default;
-	}
+dt {
+	font-weight: $typography__weight-xbold;
 }
+
+dt, dd {
+	width: 50%;
+	float: left;
+	margin: 0;
+}
+
+/* Custom Lists
+-------------------------------------------------- */

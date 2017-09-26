@@ -1,0 +1,31 @@
+/* Lists
+-------------------------------------------------- */
+.list {
+	list-style-type: none;
+}
+
+.unstyled {
+	& {
+		margin-left: 0;
+	}
+	
+	&,
+	& ul {
+		list-style: none;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+
+	li {
+		margin-bottom: 0;
+	}
+}
+
+.horizontal {
+	list-style: none;
+	margin-bottom: 0;
+
+	li {
+		display: inline-block;
+	}
+}

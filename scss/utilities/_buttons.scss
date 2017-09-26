@@ -1,0 +1,83 @@
+/* Variables
+-------------------------------------------------- */
+$__colors: 'secondary' $color__brand-secondary,
+		   'text' $color__dark-gray,
+		   'white' $color__white,
+		   'gray' $color__gray,
+		   'success' $color__brand-green,
+		   'warning' $color__brand-red,
+		   'primary' $color__brand-primary;
+
+/* Buttons
+-------------------------------------------------- */
+@each $button-color in $__colors {
+	$name: nth($button-color, 1);
+	$color: nth($button-color, 2);
+
+	.button.button-#{$name} {
+		background-color: $color;
+		border-color: $color;
+
+		.icon path,
+		.icon polygon {
+			fill: #fff;
+		}
+
+		&:focus,
+		&:hover {
+			@include solid-button-hover($color);
+		}
+
+		&[disabled] {
+			&:focus,
+			&:hover {
+				background-color: $color;
+				border-color: $color;
+			}
+		}
+
+		&.button-link,
+		&.button-outline {
+			background-color: transparent;
+			color: $color;
+			font-weight: $typography__weight-xbold;
+		}
+
+		&.button-outline {
+			& .icon path,
+			& .icon polygon {
+				fill: $color;
+			}
+
+			&:focus,
+			&:hover {
+				@include outline-button-hover($color);
+			}
+
+			&[disabled] {
+				&:focus,
+				&:hover {
+					border-color: inherit;
+					color: $color;
+					background-color: initial;
+				}
+			}
+		}
+
+		&.button-link {
+			border-color: transparent;
+
+			&:focus,
+			&:hover {
+				@include link-button-hover($color);
+			}
+
+			&[disabled] {
+				&:focus,
+				&:hover {
+					color: $color;
+				}
+			}
+		}
+	}
+}

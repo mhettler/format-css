@@ -12,7 +12,6 @@ $__jumbo: $size__spacing-xlarge*4;
 // Each of these variables need to be unique for the loop to work correctly
 $__sizes: $__none $__xsmall $__small $__medium $__large $__xlarge $__xxlarge $__jumbo;
 
-
 /* Spacing
 -------------------------------------------------- */
 @each $size in $__sizes {
@@ -69,4 +68,25 @@ $__sizes: $__none $__xsmall $__small $__medium $__large $__xlarge $__xxlarge $__
 		margin-left: $size;
 		margin-right: $size;
 	}
+}
+
+.ml-25 {
+	margin-left: 25%;
+}
+
+.ml--25 {
+	margin-left: -25%;
+}
+
+.mh-auto {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.ml-auto {
+	margin-left: auto;
+}
+
+.mr-auto {
+	margin-right: auto;
 }

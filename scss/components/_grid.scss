@@ -9,7 +9,7 @@ $__gutter: $size__spacing-default;
 .container {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: $size__max-width-container;
+	max-width: 100%;
 	padding: 0 $__gutter/2;
 	position: relative;
 	width: 100%;
@@ -43,6 +43,11 @@ $__gutter: $size__spacing-default;
 	&.row-wrap {
 		flex-wrap: wrap;
 	}
+
+	&.column-center {
+		justify-content: center;
+	}
+
 
 	// Vertically Align Columns
 	// .row-* vertically aligns every .col in the .row
@@ -168,6 +173,11 @@ $__gutter: $size__spacing-default;
 				max-width: 25%;
 			}
 
+			&.column-30 {
+				flex: 0 0 30%;
+				max-width: 30%;
+			}
+
 			&.column-33,
 			&.column-34 {
 				flex: 0 0 33.3333%;
@@ -228,12 +238,5 @@ $__gutter: $size__spacing-default;
 	}
 }
 
-
 /* Custom
 -------------------------------------------------- */
-.row.with-borders .column > div {
-	padding: $size__spacing-default;
-	border: 1px solid $color__silver;
-	margin: $size__spacing-small 0;
-	text-align: center;
-}

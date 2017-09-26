@@ -1,0 +1,21 @@
+/* Spacing
+-------------------------------------------------- */
+.striped--light-silver:nth-child(odd) {
+	background-color: $color__light-silver;
+}
+
+.striped--moon-gray:nth-child(odd) {
+	background-color: $color__moon-gray;
+}
+
+.striped--light-gray:nth-child(odd) {
+	background-color: $color__light-gray;
+}
+
+.striped--near-white:nth-child(odd) {
+	background-color: $color__near-white;
+}
+
+.stripe-dark:nth-child(odd) {
+	background-color: $color__dark-gray;
+}

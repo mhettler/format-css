@@ -1,0 +1,110 @@
+/* Media
+-------------------------------------------------- */
+.img-container {
+	opacity: 0;
+
+	img {
+		display: none;
+		height: auto;
+		max-width: 100%;
+	}
+}
+
+.cover { background-size: cover !important; }
+.contain { background-size: contain !important; }
+
+.bg-centered {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+}
+
+.img-loaded {
+	opacity: 1 !important;
+	transition: opacity 150ms ease-in-out;
+}
+
+.img-xs {
+	width: 2rem;
+	height: 2rem;
+}
+
+.img-sm {
+	width: 4rem;
+	height: 4rem;
+}
+
+.img-md {
+	width: 8rem;
+	height: 8rem;
+}
+
+.img-lg {
+	width: 16rem;
+	height: 16rem;
+}
+
+/* Aspect Ratios
+-------------------------------------------------- */
+.aspect-ratio {
+  height: 0;
+  position: relative;
+}
+
+.aspect-ratio--16x9 { padding-bottom: 56.25%; }
+.aspect-ratio--9x16 { padding-bottom: 177.77%; }
+
+.aspect-ratio--4x3 {  padding-bottom: 75%; }
+.aspect-ratio--3x4 {  padding-bottom: 133.33%; }
+
+.aspect-ratio--6x4 {  padding-bottom: 66.6%; }
+.aspect-ratio--4x6 {  padding-bottom: 150%; }
+
+.aspect-ratio--8x5 {  padding-bottom: 62.5%; }
+.aspect-ratio--5x8 {  padding-bottom: 160%; }
+
+.aspect-ratio--7x5 {  padding-bottom: 71.42%; }
+.aspect-ratio--5x7 {  padding-bottom: 140%; }
+
+.aspect-ratio--1x1 {  padding-bottom: 100%; }
+
+.aspect-ratio--object {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+
+/* Icons
+-------------------------------------------------- */
+.icon {
+	width: 20px;
+	height: 20px;
+
+	path {
+		fill: $color__silver;
+	}
+
+	&.icon-large {
+		width: 40px;
+		height: 40px;
+	}
+
+	&.icon-medium {
+		width: 25px;
+		height: 25px;
+	}
+
+	&.icon-small {
+		width: 15px;
+		height: 15px;
+	}
+}
+
+.icon-reverse {
+	transform: rotate( -180deg );            
+	transition: transform 150ms ease;
+}

@@ -1,0 +1,111 @@
+/* Gray Colors
+-------------------------------------------------- */
+$__grays: $color__black $color__near-black $color__dark-gray $color__mid-gray $color__gray $color__silver $color__light-silver $color__moon-gray $color__light-gray $color__near-white $color__white;
+
+@each $color in $__grays {
+	$i: index($__grays, $color) - 1;
+
+	.fcg-#{$i} {
+		color: $color;
+	}
+}
+
+@each $color in $__grays {
+	$i: index($__grays, $color) - 1;
+
+	.bg-#{$i} {
+		background-color: $color;
+	}
+}
+
+/* Primary Colors
+-------------------------------------------------- */
+.fc-1 {
+	color: $color__brand-primary;
+}
+
+.fc-2 {
+	color: $color__brand-secondary;
+}
+
+.fc-3 {
+	color: $color__brand-tertiary;
+}
+
+.fc-teal {
+	color: $color__brand-teal;
+}
+
+.fc-green {
+	color: $color__brand-green;
+}
+
+.fc-red {
+	color: $color__brand-red;
+}
+
+.bgc-1 {
+	background-color: $color__brand-primary;
+}
+
+.bgc-2 {
+	background-color: $color__brand-secondary;
+}
+
+.bgc-3 {
+	background-color: $color__brand-tertiary;
+}
+
+.bg-teal {
+	background-color: $color__brand-teal;
+}
+
+.bg-green {
+	background-color: $color__brand-green;
+}
+
+.bg-red {
+	background-color: $color__brand-red;
+}
+
+.bg-primary {
+	background-color: $color__brand-primary;
+}
+
+.bg-secondary {
+	background-color: $color__brand-secondary;
+}
+
+.bg-lblue-1 {
+	background-color: $color__brand-secondary;
+}
+
+.bg-lblue-2 {
+	background-color: lighten($color__brand-secondary, 30%);
+}
+
+.bg-lblue-3 {
+	background-color: lighten($color__brand-secondary, 40%);
+}
+
+.fc-lblue-1 {
+	color: $color__brand-secondary;
+}
+
+.fc-lblue-2 {
+	color: lighten($color__brand-secondary, 30%);
+}
+
+.fc-lblue-3 {
+	color: lighten($color__brand-secondary, 40%);
+}
+
+/* Transparent
+-------------------------------------------------- */
+.transparent {
+	color: transparent;
+}
+
+.bg-transparent {
+	background-color: transparent;
+}

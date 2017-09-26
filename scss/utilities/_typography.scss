@@ -1,0 +1,86 @@
+/* Sizes
+-------------------------------------------------- */
+$__sizes: $typography__size-1 $typography__size-2 $typography__size-3 $typography__size-4 $typography__size-5 $typography__size-6 $typography__size-7;
+
+@each $__size in $__sizes {
+	$i: index($__sizes, $__size) - 1;
+
+	.fs#{$i} {
+		font-size: $__size;
+	}
+}
+
+.fs2-5 {
+	font-size: 1.15rem;
+}
+
+.fs-headline {
+	font-size: $typography__size-headline;
+}
+
+.fs-subheadline {
+	font-size: $typography__size-sub-headline;
+}
+
+/* Weights
+-------------------------------------------------- */
+$__weights: $typography__weight-xlight $typography__weight-light $typography__weight-medium $typography__weight-bold $typography__weight-xbold;
+
+@each $__weight in $__weights {
+	$i: index($__weights, $__weight) - 1;
+
+	.fw#{$i} {
+		font-weight: $__weight;
+	}
+}
+
+.bold {
+	font-weight: $typography__weight-bold;
+}
+
+.thin {
+	font-weight: $typography__weight-light;
+}
+
+/* Line Heights
+-------------------------------------------------- */
+.lh-solid {
+	line-height: $typography__line-height-solid;
+}
+.lh-title {
+	line-height: $typography__line-height-header;
+}
+.lh-copy {
+	line-height: $typography__line-height-copy;
+}
+.lh-double {
+	line-height: $typography__line-height-double;
+}
+
+/* Alignments
+-------------------------------------------------- */
+.tl {
+	text-align: left;
+}
+
+.tr {
+	text-align: right;
+}
+
+.tc {
+	text-align: center;
+}
+
+/* Transforms
+-------------------------------------------------- */
+.capitalize {
+	text-transform: capitalize;
+}
+
+.lowercase {
+	text-transform: lowercase;
+}
+
+.uppercase {
+	text-transform: uppercase;
+}

@@ -8,21 +8,34 @@
 * 03/13/2017
 */
 
-/* Vendor
--------------------------------------------------- */
-@import "scss/vendor/animate/animate";
-@import "scss/vendor/hamburgers/hamburgers";
-
 /* Base
 -------------------------------------------------- */
 @import "scss/normalize";
 @import "scss/variables";
 
+/* Vendor
+-------------------------------------------------- */
+@import "scss/vendor/animate/animate";
+@import "scss/vendor/hamburgers/hamburgers";
+
 /* Mixins
 -------------------------------------------------- */
-@import "scss/mixins/flex";
 @import "scss/mixins/misc";
-@import "scss/mixins/spacing";
+
+/* Utilities
+-------------------------------------------------- */
+@import "scss/utilities/borders";
+@import "scss/utilities/buttons";
+@import "scss/utilities/colors";
+@import "scss/utilities/flexbox";
+@import "scss/utilities/lists";
+@import "scss/utilities/links";
+@import "scss/utilities/positions";
+@import "scss/utilities/spacing";
+@import "scss/utilities/structure";
+@import "scss/utilities/tables";
+@import "scss/utilities/typography";
+@import "scss/utilities/visibility";
 
 /* Components
 -------------------------------------------------- */
@@ -36,12 +49,8 @@
 @import "scss/components/lists";
 @import "scss/components/media";
 @import "scss/components/menus";
-@import "scss/components/tiles";
+@import "scss/components/modals";
+@import "scss/components/panels";
+@import "scss/components/sections";
+@import "scss/components/tables";
 @import "scss/components/typography";
-@import "scss/components/utilities";
-
-/* Custom (if using as a download)
--------------------------------------------------- */
-@import "scss/custom";
-
-

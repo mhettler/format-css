@@ -1,0 +1,57 @@
+/* Links
+-------------------------------------------------- */
+a {
+	color: $color__brand-primary;
+	text-decoration: none;
+	outline: 0;
+
+	.icon path,
+	.icon polygon {
+		fill: $color__brand-primary;
+	}
+
+	&:visited {
+		color: $color__brand-primary;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($color__brand-primary, 10%);
+		outline: 0;
+	}
+}
+
+a.secondary {
+	color: $color__brand-secondary;
+
+	&:visited {
+		color: $color__brand-secondary;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($color__brand-secondary, 10%);
+	}
+}
+
+a.warning {
+	color: $color__brand-red;
+
+	&:visited {
+		color: $color__brand-red;
+	}
+	&:hover,
+	&:focus,
+	&:active {
+		color: darken($color__brand-red, 10%);
+	}
+}
+
+a.underline,
+p a:not(.button) {
+	background: linear-gradient(#fff,#fff),linear-gradient(#fff,#fff),linear-gradient($color__brand-primary, $color__brand-primary);
+	background-size: .05em 1px,.05em 1px,1px 1px;
+	background-repeat: no-repeat,no-repeat,repeat-x;
+	text-shadow:.03em 0 #fff,-.03em 0 #fff,0 .03em #fff,0 -.03em #fff,.06em 0 #fff,-.06em 0 #fff,.09em 0 #fff,-.09em 0 #fff,.12em 0 #fff,-.12em 0 #fff,.15em 0 #fff,-.15em 0 #fff;
+	background-position: 0 95%,100% 95%,0 100%;
+}

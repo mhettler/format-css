@@ -1,0 +1,62 @@
+/* Variables
+-------------------------------------------------- */
+
+/* Modals
+-------------------------------------------------- */
+.modal {
+	position: fixed;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: $z-index__over-all;
+	display: block;
+	opacity: 1;
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+	padding: $size__spacing-default;
+	outline: 0;
+
+	& > .container {
+		background-color: #fff;
+		max-width: 60rem;
+		padding: 0;
+		border-radius: $radius__default;
+		border-bottom: solid 1px $color__gray;
+	}
+
+	&.modal-wide > .container  {
+		max-width: 80rem;
+	}
+
+	.header {
+		padding: $size__spacing-default;
+		border-bottom: solid 1px $color__light-gray;
+		margin-bottom: 0;
+	}
+
+	.body {
+		// padding: $size__spacing-small $size__spacing-default 0 $size__spacing-default;
+	}
+
+	.footer {
+		overflow: hidden;
+		background-color: $color__light-gray;
+		padding: $size__spacing-default;
+		border-bottom-left-radius: $radius__default;
+		border-bottom-right-radius: $radius__default;
+	}
+
+	.footer-text {
+		color: $color__gray;
+	}
+}
+
+.modal-open .modal {
+	overflow-x: hidden;
+	overflow-y: auto;
+}
+
+/* Custom
+-------------------------------------------------- */

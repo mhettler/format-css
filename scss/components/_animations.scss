@@ -1,7 +1,5 @@
-/* Variables
--------------------------------------------------- */
-
-
-
 /* Animations
 -------------------------------------------------- */
+.transition-all {
+	transition: all $transition__duration;
+}

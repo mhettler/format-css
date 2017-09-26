@@ -1,0 +1,56 @@
+/* Variables
+-------------------------------------------------- */
+$__color-bg-open: lighten($color__brand-tertiary, 17%);
+$__color-bg-closed: lighten($color__brand-tertiary, 8%);
+$__color-bg-dark: darken($color__brand-tertiary, 15%);
+
+/* Table
+-------------------------------------------------- */
+table,
+.table {
+	width: 100%;
+	border-spacing: 0;
+	text-align: left;
+	font-size: $typography__size-5;
+
+	thead,
+	.table-head {
+		text-transform: uppercase;
+		font-weight: $typography__weight-bold;
+	}
+
+	th,
+	.table-head > .table-row {
+		font-size: $typography__size-5;
+		padding: $size__spacing-small $size__spacing-small;
+		text-align: left;
+		min-height: auto;
+	}
+
+	td,
+	.table-row {
+		padding: $size__spacing-default $size__spacing-small;
+		border-bottom: 1px solid $color__light-gray;
+		min-height: 6.5rem;
+	}
+
+	.controls a {
+		justify-content: flex-end;
+	}
+
+	tfoot.controls {
+		td {
+			border-bottom: 0;
+			padding: $size__spacing-small $size__spacing-small;
+		}
+	}
+
+	.table-footer.controls {
+		border-bottom: 0;
+		padding: $size__spacing-default $size__spacing-small;
+		background-color: #fff;
+	}
+}
+
+/* Custom
+-------------------------------------------------- */

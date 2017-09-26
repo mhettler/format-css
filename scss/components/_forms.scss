@@ -1,24 +1,7 @@
 /* Variables
 -------------------------------------------------- */
-$__focus-color: $color__text-default;
-$__radius: $radius__default;
-$__border-width: $border__width-default;
-$__border-color: $color__silver;
-$__height: $input__height;
+$__border-color: $color__light-gray;
 $__input__spacing-default: $size__spacing-default;
-$__input__spacing-large: $size__spacing-large;
-$__input__size: $typography__size-5;
-$__input__label-weight: $typography__weight-header-bold;
-$__input__color-warning: $color__warning;
-
-$__selected-color: $color__brand-primary;
-
-$__label__description-color: $color__text-default;
-$__label__description-size: $typography__size-6;
-$__label__description-line-height: $typography__line-height-copy;
-
-$__label__required-color: $color__warning;
-
 
 /* Forms: Inputs
 -------------------------------------------------- */
@@ -41,37 +24,47 @@ textarea,
 select {
 	appearance: none; // Removes awkward default styles on some inputs for iOS
 	-webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 0;
-    text-overflow: '';
-	background-color: transparent;
-	border: $__border-width solid $__border-color;
-	border-radius: $__radius;
+	-moz-appearance: none;
+	text-indent: 0;
+	text-overflow: '';
+	border: $border__width-default solid $__border-color;
+	border-radius: $radius__default;
 	box-shadow: none;
 	box-sizing: inherit; // Forced to replace inherit values of the normalize.css
-	height: $__height;
-	padding: .6rem $__input__spacing-default/2; // The .6rem vertically centers text on FF, ignored by Webkit
+	height: 4rem;
+	padding: 0 $__input__spacing-default/2;
 	width: 100%;
-	font-size: $__input__size;
-	font-weight: $typography__weight-default;
-	@include transition(border-color 0.2s ease-in);
+	font-size: $typography__size-4;
+	font-weight: $typography__weight-light;
+	color: $color__dark-gray;
+	background-color: $color__light-gray;
+	transition: border-color 0.2s ease-in;
 
 	&:focus {
-		@include transition(border-color 0.2s ease-in);
-		border-color: $__focus-color;
+		transition: all 0.2s ease-in;
+		border-color: darken($__border-color, 7%);
+		background-color: #fff;
 		outline: 0;
-		color: $__focus-color;
+		color: $color__dark-gray;
 	}
 
 	&[disabled] {
 		cursor: default;
 		opacity: .5;
 	}
+
+	&.is-empty {
+		background-color: $color__light-gray;
+	}
+
+	&.bg-white {
+		background-color: #fff;
+	}
 }
 
 select {
 	background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#d1d1d1" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>') center right no-repeat;
-	padding-right: $__input__spacing-large;
+	padding-right: $__input__spacing-default*2;
 
 	&:focus {
 		background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" height="14" viewBox="0 0 29 14" width="29"><path fill="#222" d="M9.37727 3.625l5.08154 6.93523L19.54036 3.625"/></svg>');
@@ -79,28 +72,53 @@ select {
 }
 
 select::-ms-expand {
-    display: none;
+	display: none;
 }
 
 textarea {
-	min-height: 6.5rem;
+	min-height: 8rem;
+	max-width: 100%;
+	padding: $__input__spacing-default/2 $__input__spacing-default/2;
 }
 
 label,
 legend {
 	display: block;
-	font-size: $__input__size;
-	font-weight: $__input__label-weight;
+	font-size: $typography__size-5;
+	font-weight: $typography__weight-bold;
 	margin-bottom: $__input__spacing-default/2;
+	text-transform: uppercase;
 }
 
 fieldset,
 .fieldset {
 	border-width: 0;
-	padding: 0;
 	margin-left: 0;
 	margin-right: 0;
 	margin-bottom: $size__spacing-default;
+}
+
+.fieldset.row {
+	margin-bottom: $__input__spacing-default/2;
+
+	label {
+		margin-bottom: 2px;
+	}
+}
+
+/* Forms: File
+-------------------------------------------------- */
+input[type='file'] {
+	display: none;
+}
+
+.file-upload {
+	@extend .button;
+	@extend .button-gray;
+	display: inline-block !important;
+	cursor: pointer;
+	padding-left: $__input__spacing-default;
+	padding-right: $__input__spacing-default;
 }
 
 
@@ -131,7 +149,7 @@ input[type='radio'] {
 		label {
 			padding: 0 0 0 $size__spacing-default;
 			width: 100%;
-			line-height: 1.5rem;
+			line-height: 1.5;
 			text-align: left;
 			cursor: pointer;
 			float: none; 
@@ -139,6 +157,16 @@ input[type='radio'] {
 			position: relative;
 			left: 0;
 			top: 0;
+		}
+	}
+
+	&.large {
+		& > span {
+			label {
+				margin-bottom: 2px;
+				padding: 0 0 0 3rem;
+				line-height: 3rem;
+			}
 		}
 	}
 }
@@ -154,26 +182,58 @@ input[type='radio'] {
 		position: absolute;
 		left: 0;
 		top: 0;
-		background-color: $color__gray;
+		background-color: #fff;
 		border-width: 1px;
 		border-radius: 3px;
 		border-style: solid;
+		border-color: darken($__border-color, 5%);
 		cursor: pointer;
 		display: inline-block;
 		height: 1.5rem;
 		width: 1.5rem;
 		text-align: center;
 		color: $color__gray;
-		@include transition(all 0.1s linear 0s);
+		transition: all 0.1s linear 0s;
 	}
 
 	&:checked + label:before {
-		background-color: $__selected-color;
+		background-color: $color__brand-primary;
 		content: '';
 		background-size: 10px;
-		border-color: $__selected-color;
+		border-color: $color__brand-primary;
 		color: #fff;
-		@include transition(all 0.1s linear 0s);
+		transition: all 0.1s linear 0s;
+	}
+}
+
+.checkbox.large input {
+	& + label:before {
+		height: 3rem;
+		width: 3rem;
+	}
+
+	&:checked + label:before {
+		background-size: 15px;
+	}
+}
+
+.checkbox.medium {
+	input {
+		& + label:before {
+			height: 2rem;
+			width: 2rem;
+		}
+
+		&:checked + label:before {
+			background-size: 10px;
+		}
+	}
+
+	label {
+		padding-left: 3rem;
+		height: 2rem;
+		display: flex;
+		align-items: center;
 	}
 }
 
@@ -196,14 +256,40 @@ input[type='radio'] {
 			line-height: 1.5;
 			color: $color__gray;
 			border-radius: 50%;
-			@include transition(all 0.1s linear 0s);
+			transition: all 0.1s linear 0s;
 		}
 
 		&:checked + label:before,
 		&[type="radio"]:checked {
-			border: 6px solid $__selected-color;
-			@include transition(all 0.1s linear 0s);
+			border: 6px solid $color__brand-primary;
+			transition: all 0.1s linear 0s;
 		}
+	}
+}
+
+/* Forms: Alerts
+-------------------------------------------------- */
+.alert {
+	padding: $size__spacing-default;
+	border-radius: $radius__default;
+	background-color: $color__light-gray;
+
+	ul {
+		margin-bottom: 0;
+
+		li:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+
+	&.alert-danger {
+		background-color: $color__brand-red;
+		color: #fff;
+	}
+
+	&.alert-success {
+		background-color: $color__brand-green;
+		color: #fff;
 	}
 }
 
@@ -215,43 +301,51 @@ input[type='radio'] {
 	cursor: default !important;
 }
 
+.fieldset.success,
+.fieldset.has-error,
 fieldset.success,
-fieldset.error {
-	.message {
-		color: lighten($color__warning, 10%);
-		font-weight: $typography__weight-header-default;
-		font-size: $typography__size-6;
+fieldset.has-error {
+	.help-message {
+		color: $color__brand-red;
+		font-weight: $typography__weight-medium;
+		font-size: $typography__size-5;
 		margin-top: $size__spacing-small/2;
 	}
 }
 
+.fieldset.success,
 fieldset.success {
 	input,
 	label {
-		color: $color__success;
+		color: $color__brand-green;
 	}
 
-	input {
-		border-color: $color__success;
+	input,
+	select {
+		border-color: $color__brand-green;
 	}
 
-	.message {
-		color: lighten($color__success, 10%);
+	.help-message {
+		color: $color__brand-green;
 	}
 }
 
-fieldset.error {
+.fieldset.has-error,
+fieldset.has-error {
 	input,
 	label {
-		color: $color__warning;
+		color: $color__brand-red;
 	}
 
-	input {
-		border-color: $color__warning;
+	input,
+	select {
+		border-color: $color__brand-red;
+		background-color: #fff6f5;
 	}
 
-	.message {
-		color: lighten($color__warning, 10%);
+	.help-message {
+		color: $color__brand-red;
+		display: block;
 	}
 }
 
@@ -277,17 +371,17 @@ fieldset.error {
 	}
 }
 
-.desc {
-    color: rgba($__label__description-color, .5);
-    font-size: $__label__description-size;
-    line-height: $__label__description-line-height;
-    margin-top: $size__spacing-small/2;
+.description {
+	color: $color__silver;
+	font-size: $typography__size-6;
+	line-height: $typography__line-height-copy;
+	margin-top: $size__spacing-small/2;
 }
 
 .req {
-    position: relative;
-    top: 1px;
-	color: $__label__required-color;
+	position: relative;
+	top: 1px;
+	color: $color__brand-red;
 }
 
 .label-inline {
@@ -298,56 +392,55 @@ fieldset.error {
 
 .append,
 .prepend {
-	@include flex;
+	display: flex;
 
 	& input {
-		@include flex-item-one;
+		flex: 1;
 	}
 	& .button,
 	& span {
-		@include flex-item-shrink;
-    }
-	& span {
-        @include flex;
-        @include flex-items-column;
-        @include flex-items-center;
-
+		// @include flex-item-shrink;
+	}
+	& > span {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		font-weight: normal;
-		font-size: $__input__size;
+		font-size: $typography__size-4;
 		padding: 0 .875rem;
-		color: rgba(0, 0, 0, .5);
+		color: $color__silver;
 		white-space: nowrap;
 		margin-bottom: 0;
-		border: $__border-width solid $__border-color;
+		border: $border__width-default solid $__border-color;
 	}
 }
 
 .prepend {
-    & input {
-        border-radius: 0 $__radius $__radius 0;
-    }
-    & button {
-        margin-right: -1px;
-        border-radius: $__radius 0 0 $__radius !important;
-    }
-    & span {
-        border-right: none;
-        border-radius: $__radius 0 0 $__radius;
-    }
+	& input {
+		border-radius: 0 $radius__default $radius__default 0;
+	}
+	& button {
+		margin-right: -1px;
+		border-radius: $radius__default 0 0 $radius__default !important;
+	}
+	& span {
+		border-right: none;
+		border-radius: $radius__default 0 0 $radius__default;
+	}
 }
 
 .append {
-    & input {
-        border-radius: $__radius 0 0 $__radius;
-    }
-    & button {
-        margin-left: -1px;
-        border-radius: 0 $__radius $__radius 0 !important;
-    }
-    & span {
-        border-left: none;
-        border-radius: 0 $__radius $__radius 0;
-    }
+	& input {
+		border-radius: $radius__default 0 0 $radius__default;
+	}
+	& button {
+		margin-left: -1px;
+		border-radius: 0 $radius__default $radius__default 0 !important;
+	}
+	& span {
+		border-left: none;
+		border-radius: 0 $radius__default $radius__default 0;
+	}
 }
 
 
