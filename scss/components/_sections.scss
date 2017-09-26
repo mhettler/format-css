@@ -4,27 +4,6 @@
 
 /* Sections
 -------------------------------------------------- */
-.page-header {
-	.container {
-		@include flex;
-		@include flex-items-middle;
-		height: 100%;
-	}
-
-	.masthead {
-		height: $size__header-height;
-	}
-
-	.details {
-		margin-top: $size__spacing-default;
-		font-size: $typography__size-5;
-
-		li {
-			margin-right: $size__spacing-small;
-		}
-	}
-}
-
 section {
 	background-color: #fff;
 

@@ -19,14 +19,9 @@ main {
 		width: 100%;
 		text-align: center;
 		z-index: 20;
-		@include position-cover;
-		@include flex;
-		@include flex-items-middle;
-		@include flex-items-center;
-		@include flex-items-column;
 
 		.title {
-			font-weight: $typography__weight-header-default;
+			font-weight: $typography__weight-bold;
 			font-size: $typography__size-headline;
 			line-height: 1;
 			margin-bottom: $size__spacing-small;
@@ -34,7 +29,7 @@ main {
 
 		.lead {
 			font-family: $typography__family-headers;
-			font-weight: $typography__weight-header-default;
+			font-weight: $typography__weight-bold;
 		}
 
 		.title, .lead {

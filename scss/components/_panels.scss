@@ -15,15 +15,8 @@
 
 	.panel-footer {
 		margin: $size__spacing-large 0;
-		background-color: $color__aluminum;
+		background-color: $color__light-gray;
 		padding: $size__spacing-default;
-	}
-
-	.comment {
-		padding: $size__spacing-default;
-		border: 1px solid $color__border;
-		border-radius: $radius__default;
-		background-color: #fff;
 	}
 }
 
