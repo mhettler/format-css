@@ -1,9 +1,8 @@
 /* Sizes
 -------------------------------------------------- */
 $__sizes: $typography__size-1 $typography__size-2 $typography__size-3 $typography__size-4 $typography__size-5 $typography__size-6 $typography__size-7;
-$__sizes-mobile: 2.25rem $typography__size-2 $typography__size-3 $typography__size-4 $typography__size-5 $typography__size-6 $typography__size-7;
 
-@each $__size in $__sizes-mobile {
+@each $__size in $__sizes {
 	$i: index($__sizes, $__size) - 1;
 
 	.fs#{$i} {
@@ -12,53 +11,11 @@ $__sizes-mobile: 2.25rem $typography__size-2 $typography__size-3 $typography__si
 }
 
 .fs-headline {
-	font-size: 2.25rem;
+	font-size: $typography__weight-bold;
 }
 
 .fs-subheadline {
-	font-size: 2.25rem;
-}
-
-@media ($breakpoint__tablet-portrait){
-	.fs-headline-m { font-size: 6rem; }
-	.fs-subheadline-m { font-size: 5rem; }
-
-	@each $__size in $__sizes {
-		$i: index($__sizes, $__size) - 1;
-
-		.fs#{$i}-ns {
-			font-size: $__size;
-		}
-	}
-}
-
-@media ($breakpoint__desktop) {
-	.fs-headline-m { font-size: 6rem; }
-	.fs-subheadline-l { font-size: 5rem; }
-
-	@each $__size in $__sizes {
-		$i: index($__sizes, $__size) - 1;
-
-		.fs#{$i}-m {
-			font-size: $__size;
-		}
-	}
-}
-
-@media ($breakpoint__big-desktop) {
-	.fs-headline-l {
-		font-size: 6rem;
-	}
-	.fs-subheadline-l {
-		font-size: 5rem;
-	}
-	@each $__size in $__sizes {
-		$i: index($__sizes, $__size) - 1;
-
-		.fs#{$i}-xl {
-			font-size: $__size;
-		}
-	}
+	font-size: $typography__size-sub-headline;
 }
 
 /* Weights

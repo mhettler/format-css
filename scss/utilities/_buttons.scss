@@ -66,6 +66,14 @@ $__colors: 'secondary' $color__brand-secondary,
 
 		&.button-link {
 			border-color: transparent;
+			padding: 0;
+
+			&.inherit {
+				text-transform: capitalize;
+				font-size: inherit;
+				font-weight: inherit;
+				letter-spacing: 0;
+			}
 
 			&:focus,
 			&:hover {
@@ -80,4 +88,8 @@ $__colors: 'secondary' $color__brand-secondary,
 			}
 		}
 	}
+}
+
+button.match-field-height {
+	height: $input__height;
 }
